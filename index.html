@@ -1,0 +1,413 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>15 EMF Projects in 25 minutes</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <aside class="note">
+      <section>
+        <p>Welcome everyone to this talk, ...</p>
+      </section>
+    </aside>
+    <article class="flexbox vcenter">
+      <span><img src="images/product_logo_wide.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/product_logo_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/product_logo_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>What is Ariadne?</h2>
+      <h3>an answer...</h3>
+    </hgroup>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Origin of the problem</h2>
+    </hgroup>
+    <article>
+	  <p>Back in EclipseCon US 2012</p>
+      <ul>
+        <li>Wayne Beaton's work on projects.eclipse.org
+		  <ul>
+            <li>Wayne highlighted the need for more tooling for project management</li>
+          </ul>
+		</li>
+        <li>OMG Workshop
+          <ul>
+            <li>The Eclipse community is opaque for outsiders, so is the OMG community</li>
+          </ul>
+        </li>
+      </ul>
+	  <p>For the release review of Eclipse 4.2 Juno, I've started to ask myself some simple questions</p>
+	  <p>The further I looked for answers, the more questions I had...</p>
+    </article>
+  </slide>
+  
+  <slide class="segue dark nobackground">
+    <aside class="gdbar right bottom"><img src="images/product_logo_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>If Ariadne is an answer</h2>
+      <h3>then what are the questions?</h3>
+    </hgroup>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Questions</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>What are the APIs of the Eclipse release train?
+		  <ul>
+            <li>Too complicated? ok, what about the new APIs of the latest release</li>
+          </ul>
+		</li>
+		<li>Which APIs are not tested?</li>
+		<li>Which features are impacted by my work?</li>
+        <li>What is the license of my project?</li>
+		<li>What are the dependencies used while building the release train?
+		  <ul>
+            <li>Are there any problems with them? conflicts? incompatibilities?</li>
+          </ul>
+		</li>
+		<li>Which features are the most bugged?</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>All these questions have some common points</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>You have to ask 10 persons to have 11 answers</li>
+		<li>We have a pretty good idea of the answer
+		  <ul>
+            <li>We are not scared since we have a "good enough" answer</li>
+          </ul>
+		</li>
+		<li>Looking for the correct answer is long and boring
+		  <ul>
+            <li>It often involves navigating in countless of technical artifacts</li>
+          </ul>
+		</li>
+		<li>We know where the answer is
+		  <ul>
+            <li>Even better, we feel that the answer is just a couple click away</li>
+          </ul>
+		</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide class="seguewhite">
+    <hgroup class="auto-fadein">
+      <h2>Where is the answer?</h2>
+    </hgroup>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/answer.png)">
+    <hgroup>
+    </hgroup>
+  </slide>
+  
+  <slide class="mazeslide darkbackground nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/maze.png"></span>
+    </article>
+  </slide>
+  
+  <slide class="seguewhite">
+    <hgroup class="auto-fadein">
+      <h2>How to solve this problem?</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Document all the things!</h2>
+    </hgroup>
+    <article>
+	  <p>The documentation is nice but it won't be enough</p>
+      <ul class="build">
+        <li>It will be very long to do it</li>
+        <li>It lacks synchronization with the documented artifacts</li>
+        <li>It cannot be easily manipulated by other tools</li>
+        <li>It's error prone</li>
+		<li>It's boring!</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar right bottom"><img src="images/product_logo_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>We need something stronger</h2>
+      <h3>but first, what is a project?</h3>
+    </hgroup>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/acceleo_m.png)">
+    <hgroup>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Architecture of Ariadne</h2>
+    </hgroup>
+    <article class="smaller">
+      <img src="images/barchart.png" alt="Description" title="Description">
+      <footer class="source">source: place source info here</footer>
+    </article>
+  </slide>
+
+  <slide hidden>
+    Hidden slides are left out of the presentation.
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Slide with Image</h2>
+    </hgroup>
+    <article>
+      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
+      <footer class="source">source: place source info here</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Table Option A</h2>
+      <h3>Subtitle Placeholder</h3>
+    </hgroup>
+    <article>
+      <table>
+        <tr>
+          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
+        </tr>
+        <tr>
+          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Table Option A (Smaller Text)</h2>
+      <h3>Subtitle Placeholder</h3>
+    </hgroup>
+    <article class="smaller">
+      <table>
+        <tr>
+          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
+        </tr>
+        <tr>
+          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Table Option B</h2>
+      <h3>Subtitle Placeholder</h3>
+    </hgroup>
+    <article>
+      <table class="rows">
+        <tr>
+          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+        <tr>
+          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Slide Styles</h2>
+    </hgroup>
+    <article class="smaller">
+      <div class="columns-2">
+        <ul>
+          <li class="red">class="red"</li>
+          <li class="red2">class="red2"</li>
+          <li class="red3">class="red3"</li>
+          <li class="blue">class="blue"</li>
+          <li class="blue2">class="blue2"</li>
+          <li class="blue3">class="blue3"</li>
+          <li class="green">class="green"</li>
+          <li class="green2">class="green2"</li>
+        </ul>
+        <ul>
+          <li class="green3">class="green3"</li>
+          <li class="yellow">class="yellow"</li>
+          <li class="yellow2">class="yellow2"</li>
+          <li class="yellow3">class="yellow3"</li>
+          <li class="gray">class="gray"</li>
+          <li class="gray2">class="gray2"</li>
+          <li class="gray3">class="gray3"</li>
+          <li class="gray4">class="gray4"</li>
+        </ul>
+      </div>
+      <div class="centered" style="margin-top:2em">
+        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
+      </div>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/product_logo_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Segue Slide</h2>
+      <h3>Subtitle Placeholder</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
+    <hgroup>
+      <h2 class="white">Full Image (with Optional Header)</h2>
+    </hgroup>
+    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/product_logo_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        This is an example of quote text.
+      </q>
+      <div class="author">
+        Name<br>
+        Company
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Slide with Iframe</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/product_logo_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide darkbackground nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/product_logo_wide_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
