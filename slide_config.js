@@ -18,12 +18,12 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'St&eacute;phane B&eacute;gaudeau',
-    company: 'Software Engineer, Obeo',
-    gplus: 'http://www.google.com/profiles/stephane.begaudeau',
-    twitter: '@sbegaudeau',
-    www: 'http://sbegaudeau.github.com/Ariadne',
-    github: 'http://github.com/sbegaudeau'
+    name: 'C&eacute;dric Brun',
+    company: 'CTO, Obeo',
+    gplus: 'http://www.google.com/profiles/cedric.brun',
+    twitter: '@bruncedric',
+    www: 'http://model-driven-blogging.blogspot.fr/',
+    github: 'http://github.com/cbrun'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
