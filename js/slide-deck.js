@@ -109,6 +109,8 @@ SlideDeck.prototype.onDomLoaded_ = function(e) {
       document.body.classList.add('popup');
     }
   }
+  
+  
 };
 
 /**
@@ -223,6 +225,12 @@ SlideDeck.prototype.onBodyKeyDown_ = function(e) {
     case 82: // R
       // TODO: implement refresh on main slides when popup is refreshed.
       break;
+      
+    case 84: // T
+      window.setInterval(function() {
+	window.slidedeck.nextSlide.apply(window.slidedeck)
+        },3000);
+      break;
 
     case 27: // ESC: Hide notes and highlighting
       document.body.classList.remove('with-notes');
@@ -247,6 +255,9 @@ SlideDeck.prototype.onBodyKeyDown_ = function(e) {
         }
       }
       break;
+      
+     
+      
 
     case 87: // W: Toggle widescreen
       // Only respect 'w' on body. Don't want to capture keys from an <input>.
@@ -763,6 +774,7 @@ SlideDeck.prototype.loadAnalytics_ = function() {
     nope: ['js/polyfills/classList.min.js', 'js/polyfills/dataset.min.js'],
     complete: function() {
       window.slidedeck = new SlideDeck();
+
     }
   });
 })();
