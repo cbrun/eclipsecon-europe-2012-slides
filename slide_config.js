@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Beyond Mylyn',
-    subtitle: 'Leverage the data of your IDE',
+    title: '15 EMF projects in 25 minutes',
+    subtitle: 'A guided tour in the EMF EcoSystem',
     useBuilds: true, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
     enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.

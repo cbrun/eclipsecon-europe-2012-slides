@@ -5,6 +5,15 @@ Authors: Eric Bidelman <ebidel@gmail.com>
          Luke Mahé <lukem@google.com>
 
 URL: https://code.google.com/p/io-2012-slides
+
+
+TODO : 
+  check the TBD markers
+  refers to other econ talks
+  fill in the speaker notes
+  check the "feedback" ul-li on some pages.
+  highlight code
+  check order for projects
 -->
 <!DOCTYPE html>
 <html>
@@ -21,6 +30,15 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <style TYPE="text/css">
+    .icon {
+      vertical-align:middle
+    }
+    
+    .shot {
+    padding: 7px 7px 7px 7px ;
+    }
+  </style>
 </head>
 <body style="opacity: 0">
 
@@ -29,11 +47,10 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="logoslide nobackground">
     <aside class="note">
       <section>
-        <p>Welcome everyone to this talk, ...</p>
+        <p>Welcome to this talk, ...</p>
       </section>
     </aside>
-    <article class="flexbox vcenter">
-      <span><img src="images/product_logo_wide.png"></span>
+    <article class="flexbox vcenter">      
     </article>
   </slide>
 
@@ -45,333 +62,605 @@ URL: https://code.google.com/p/io-2012-slides
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
     </hgroup>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/product_logo_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>What is Ariadne?</h2>
-      <h3>an answer...</h3>
-    </hgroup>
-  </slide>
+  </slide> 
   
   <slide>
     <hgroup>
-      <h2>Origin of the problem</h2>
+      <h2>How we play'll this game</h2>
     </hgroup>
-    <article>
-	  <p>Back in EclipseCon US 2012</p>
+    <article>      
       <ul>
-        <li>Wayne Beaton's work on projects.eclipse.org
-		  <ul>
-            <li>Wayne highlighted the need for more tooling for project management</li>
-          </ul>
-		</li>
-        <li>OMG Workshop
+        <li>Same amount of time per project
           <ul>
-            <li>The Eclipse community is opaque for outsiders, so is the OMG community</li>
+            <li>1min30</li>
+            <li>timing is forced by the presentation</li>
+          </ul>          
+        </li>
+        <li>Same structure for each project
+          <ul>
+            <li>Scope and where to find it</li>
+            <li>An example</li>
+            <li>My feedback</li>
           </ul>
         </li>
+        <li>EMF Related
+          <ul>
+            <li>Tools for Ecore or working with EMF Core</li>
+            <li>Framework on top of EMF Core</li>
+          </ul>          
+        </li>
       </ul>
-	  <p>For the release review of Eclipse 4.2 Juno, I've started to ask myself some simple questions</p>
-	  <p>The further I looked for answers, the more questions I had...</p>
+      <p>I won't take questions during the presentation but would gladly discuss later on.</p>
+      <img class="reflect" src="images/bus-logo.png" width="300" style="position:absolute;left:700px;top:120px">      
     </article>
+    <footer class="source">http://thenounproject.com/einfachein/#</footer>
   </slide>
   
-  <slide class="segue dark nobackground">
-    <aside class="gdbar right bottom"><img src="images/product_logo_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>If Ariadne is an answer</h2>
-      <h3>then what are the questions?</h3>
-    </hgroup>
-  </slide>
-  
-  <slide>
-    <hgroup>
-      <h2>Questions</h2>
-    </hgroup>
-    <article>
-      <ul class="build">
-        <li>What are the APIs of the Eclipse release train?
-		  <ul>
-            <li>Too complicated? ok, what about the new APIs of the latest release</li>
-          </ul>
-		</li>
-		<li>Which APIs are not tested?</li>
-		<li>Which features are impacted by my work?</li>
-        <li>What is the license of my project?</li>
-		<li>What are the dependencies used while building the release train?
-		  <ul>
-            <li>Are there any problems with them? conflicts? incompatibilities?</li>
-          </ul>
-		</li>
-		<li>Which features are the most bugged?</li>
-      </ul>
-    </article>
-  </slide>
-  
-  <slide>
-    <hgroup>
-      <h2>All these questions have some common points</h2>
-    </hgroup>
-    <article>
-      <ul class="build">
-        <li>You have to ask 10 persons to have 11 answers</li>
-		<li>We have a pretty good idea of the answer
-		  <ul>
-            <li>We are not scared since we have a "good enough" answer</li>
-          </ul>
-		</li>
-		<li>Looking for the correct answer is long and boring
-		  <ul>
-            <li>It often involves navigating in countless of technical artifacts</li>
-          </ul>
-		</li>
-		<li>We know where the answer is
-		  <ul>
-            <li>Even better, we feel that the answer is just a couple click away</li>
-          </ul>
-		</li>
-      </ul>
-    </article>
-  </slide>
-  
-  <slide class="seguewhite">
-    <hgroup class="auto-fadein">
-      <h2>Where is the answer?</h2>
-    </hgroup>
-  </slide>
-  
-  <slide class="fill nobackground" style="background-image: url(images/answer.png)">
-    <hgroup>
-    </hgroup>
-  </slide>
-  
-  <slide class="mazeslide darkbackground nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/maze.png"></span>
-    </article>
-  </slide>
-  
-  <slide class="seguewhite">
-    <hgroup class="auto-fadein">
-      <h2>How to solve this problem?</h2>
-    </hgroup>
-  </slide>
-  
-  <slide>
-    <hgroup>
-      <h2>Document all the things!</h2>
-    </hgroup>
-    <article>
-	  <p>The documentation is nice but it won't be enough</p>
-      <ul class="build">
-        <li>It will be very long to do it</li>
-        <li>It lacks synchronization with the documented artifacts</li>
-        <li>It cannot be easily manipulated by other tools</li>
-        <li>It's error prone</li>
-		<li>It's boring!</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar right bottom"><img src="images/product_logo_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>We need something stronger</h2>
-      <h3>but first, what is a project?</h3>
-    </hgroup>
-  </slide>
-  
-  <slide class="fill nobackground" style="background-image: url(images/acceleo_m.png)">
-    <hgroup>
-    </hgroup>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Architecture of Ariadne</h2>
-    </hgroup>
-    <article class="smaller">
-      <img src="images/barchart.png" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide hidden>
-    Hidden slides are left out of the presentation.
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A (Smaller Text)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option B</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide Styles</h2>
-    </hgroup>
-    <article class="smaller">
-      <div class="columns-2">
-        <ul>
-          <li class="red">class="red"</li>
-          <li class="red2">class="red2"</li>
-          <li class="red3">class="red3"</li>
-          <li class="blue">class="blue"</li>
-          <li class="blue2">class="blue2"</li>
-          <li class="blue3">class="blue3"</li>
-          <li class="green">class="green"</li>
-          <li class="green2">class="green2"</li>
-        </ul>
-        <ul>
-          <li class="green3">class="green3"</li>
-          <li class="yellow">class="yellow"</li>
-          <li class="yellow2">class="yellow2"</li>
-          <li class="yellow3">class="yellow3"</li>
-          <li class="gray">class="gray"</li>
-          <li class="gray2">class="gray2"</li>
-          <li class="gray3">class="gray3"</li>
-          <li class="gray4">class="gray4"</li>
-        </ul>
-      </div>
-      <div class="centered" style="margin-top:2em">
-        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
-      </div>
-    </article>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/product_logo_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Segue Slide</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-  </slide>
-
   <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
     <hgroup>
       <h2 class="white">Full Image (with Optional Header)</h2>
     </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
+    <footer class="source white">http://download.eclipse.org/releases/juno</footer>
   </slide>
-
-  <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/product_logo_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <q>
-        This is an example of quote text.
-      </q>
-      <div class="author">
-        Name<br>
-        Company
-      </div>
-    </article>
-  </slide>
-
+  
+    <!-- #################### EcoreTools ######################### -->
   <slide>
     <hgroup>
-      <h2>Slide with Iframe</h2>
+      <h2>EcoreTools</h2>
+      <h3>Graphical Modeler for Ecore</h3>
+      <article>
+          <img src="images/ecoretools-blueprint.png">          
+      </article>
+    </hgroup>
+    <footer >http://download.eclipse.org/releases/juno</footer>
+  </slide>
+  
+  
+  <slide class="fill nobackground" style="background-image: url(images/ecoretools-choco.png)">
+    <hgroup>
+      <h2>EcoreTools</h2>
+      <h3>ChocoApp domain model</h3>      
+    </hgroup>    
+    <article>
+     <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+      </article>
+  </slide>
+  
+  
+  
+  <!-- #################### XCore ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Xcore</h2>
+      <h3>Textual Ecore with Java binding</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" src="images/xcore-keyboard.png"> + 
+       <img class="reflect" src="images/xcore-bean.png">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://wiki.eclipse.org/Xcore</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+  </slide>
+  
+ <slide>
+    <article >      
+      <img class="reflect" src="images/xcore-choco.png">       
+      <img class="reflect" src="images/xcore-choco-java.png" style="position:absolute;left:600px;top:100px">
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+  
+   <!-- #################### EEF ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Extended Editing Framework (EEF)</h2>
+      <h3>Rich properties and dialogs</h3>
+    </hgroup>
+    <article >
+       <img  width="300px" src="images/eef-editor-logo.png">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/modeling/emft/?project=eef</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+  </slide>
+  
+ <slide>
+    <article >      
+      <img class="reflect" src="images/eef-model.png">       
+      <img class="reflect" src="images/eef-editor.png" style="position:absolute;left:400px;top:60px">
+      <!--<img class="reflect" src="images/eef-wizard.png" style="position:absolute;left:600px;top:0px">-->
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+    <!-- #################### Compare ######################### -->
+  
+  <slide>
+    <hgroup>
+      <h2>Compare 2.x</h2>
+      <h3>Team, Match, Diff and Merge</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" src="images/compare-merge.png">
+       <img class="reflect" width="650px" src="images/compare-ecore.png">
+       <img class="reflect"  src="images/compare-history.png" width="450" style="position:absolute;left:600px;top:260px">
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/emf/compare/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/modeling/emf/compare/updates/interim/2.1</p>
+       </p>
+    </article>
+  </slide>
+  
+      
+  <slide>
+    <h3>Detecting conflict during REST operations</h3>
+    <article >      
+      <pre class="prettyprint" data-lang="java">
+public Resource <b>put</b>(URI resourcePath, Resource putFromRemoteClient,long ancestorTimestamp) {
+    Resource ancestorFromDB = data.getResourcePerRevision(resourcePath,
+            ancestorTimestamp);     
+    IComparisonScope scope = EMFCompare.createDefaultScope(<b>putFromRemoteClient,
+                                              latestFromDB.getResource(), ancestorFromDB</b>);
+    Comparison comp = EMFCompare.builder().build().<b>compare</b>(scope);
+    for (Conflict conflict : <b>comp.getConflicts()</b>) {
+        // How do you want to handle a conflict ?            
+    }
+        
+    for (Diff diff : <b>comp.getDifferences()</b>) {
+      diff.<b>copyLeftToRight()</b>;
+    }
+    return latestFromDB.getResource();
+}
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+  
+<!-- #################### sonar plugin ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Sonar Regex File Filter</h2>
+      <h3>Exclude generated code from your analysis</h3>
+    </hgroup>
+    <article >       
+       <img class="reflect" src="images/sonar-checklist.png">
+       <img class="reflect" width="200" src="images/sonar-logo.jpg" style="position:absolute;left:800px;top:50px">       
+       <p>
+       <p><img class="icon" src="images/link.png">https://github.com/Obeo/fr.obeo.sonar.plugin.regexfilefilter</p>
+       <p><img class="icon" src="images/download.png">mvn clean package</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Sonar</h3>
+    <article >
+      <img src="images/sonar-config.png">      
+      <img src="images/sonar-example.png" style="position:absolute;left:400px;top:300px">
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>    
+  
+  <!-- #################### Wikitext Bridge ######################### -->
+  
+  <slide>
+    <hgroup>
+      <h2>Wikitext Bridge (Mylyn Intent)</h2>
+      <h3>Get a model from a wiki page</h3>
+    </hgroup>
+    <article >
+       <img class="reflect"  src="images/intent-bridge.png">
+       <img class="reflect"  src="images/wikitext-integration.png" width="500" style="position:absolute;left:600px;top:260px">
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/intent/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+  </slide>
+  
+      
+  <slide>
+    <h3>Aggregate Wiki pages in a Single HTML document</h3>
+    <article class="smaller">      
+      <pre class="prettyprint" data-lang="java">
+private static void loadWikiPageAsModel() throws IOException {
+    
+    Document userGuide = getDocumentFromWiki(URI
+        .createURI("http://wiki.eclipse.org/EMF_Compare/User_Guide"));
+
+    Document developperGuide = getDocumentFromWiki(URI
+        .createURI("http://wiki.eclipse.org/EMF_Compare/Developer_Guide"));
+
+    Document faq = getDocumentFromWiki(URI
+        .createURI("http://wiki.eclipse.org/EMF_Compare/FAQ"));
+
+    Section userGuideSec = transformToSection(userGuide, "User Guide");
+    Section developperGuideSec = transformToSection(developperGuide,
+        "Developper Guide");
+    Section faqSec = transformToSection(faq, "Frequently Asked Questions");
+
+    Document aggregated = newDocument("EMF Compare");
+    aggregated.getContent().add(userGuideSec);
+    aggregated.getContent().add(developperGuideSec);
+    aggregated.getContent().add(faqSec);
+
+    Html generator = new Html(aggregated, new File("/tmp/wikiout"),
+        Collections.EMPTY_LIST);
+    generator.doGenerate(new BasicMonitor());
+  }
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <!-- #################### EMFPath ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>EMFPath</h2>
+      <h3>Mixing Guava and EMF</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" height="250"  src="images/emfpath-tracking2.png">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://code.google.com/a/eclipselabs.org/p/emfpath/</p>
+       <p><img class="icon" src="images/download.png">http://svn.codespot.com/a/eclipselabs.org/emfpath/trunk/repository/</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Querying with Java</h3>
+    <article >      
+      <pre class="prettyprint" data-lang="java">
+public class UserQuery {
+  private User user;
+  public UserQuery(User user) {
+     this.user = user;
+  }
+  public Iterable<Choco> allPendingChocos() {  
+    Predicate<EObject> isPending = <b>Having.feature</b>(ChocoPackage.Literals.CHOCO__STATE,<b>Equals.to</b>(ChocoState.PENDING));
+    return adapt(user).<b>descendant().filter</b>(Choco.class).<b>filter</b>(isPending);
+  }
+}
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+
+ <!-- #################### emfjson ######################### -->
+  
+  <slide>
+    <hgroup>
+      <h2>emfjson</h2>
+      <h3>EObjects to Json, Json to EObjects</h3>
+    </hgroup>
+    <article >    
+    <!--
+       <img class="reflect" src="images/json-github.png">
+       <img class="reflect"  src="images/json-logo.jpg" style="position:absolute;left:900px;top:20px">
+       -->
+          <img class="reflect" width="250" src="images/emfjson-jsonlogo.png">
+       <p>
+       
+       <p><img class="icon" src="images/link.png">https://github.com/ghillairet/emfjson</p>
+       <p><img class="icon" src="images/download.png">http://ghillairet.github.com/p2/emfjson/releases/0.5.0p>
+       </p>
+    </article>
+  </slide>
+  
+      
+  <slide>
+    <h3>A generic JSON API</h3>
+    <article class="smaller">      
+      <pre class="prettyprint" data-lang="java">
+public void get(URI resourcePath, OutputStream writer) throws IOException {
+    Resource resource = this.dataAccess.get(resourcePath);
+    JsResourceImpl jsRes = new JsResourceImpl(resourcePath); // put content from original resource to the json one.
+    jsRes.getContents().addAll(resource.getContents());
+
+    Map<String, Object> options = new HashMap<String, Object>();
+    options.put(EMFJs.OPTION_INDENT_OUTPUT, true);
+    options.put(EMFJs.OPTION_SERIALIZE_TYPE, false);
+
+    jsRes.save(writer, options);
+}
+
+public void put(URI resourcePath, InputStream in) throws IOException {
+    Map<String, Object> options = new HashMap<String, Object>();
+    options.put(EMFJs.OPTION_ROOT_ELEMENT,ChocoPackage.eINSTANCE.getBoard());
+
+    JsResourceImpl jsRes = new JsResourceImpl(resourcePath);
+    jsRes.load(options);
+    this.dataAccess.put(resourcePath, jsRes, 0);
+    
+    /*
+     * You could retrieve the instance with :
+     */
+    Board root = (Board) jsRes.getContents().get(0);
+}
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+
+<!-- #################### CDO ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>CDO</h2>
+      <h3>Share and Distribute</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" width="550"  src="images/cdo-users.png">
+       <img class="reflect" width="200" src="images/cdo-logo.png" style="position:absolute;left:800px;top:50px">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/cdo/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Database backend</h3>
+    <article >      
+      <pre class="prettyprint" data-lang="java">
+ class TBD {
+ }
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+<!-- #################### gendoc ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Gendoc2</h2>
+      <h3>Generate Office docs from models</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" width="300" style="position:absolute;left:680px;top:60px"  src="images/gendoc-doc.png">             
+       <div  style="position:absolute;top:500px" >
+        <p><img class="icon" src="images/link.png">http://www.topcased.org/index.php?id_projet_pere=102</p>
+        <p><img class="icon" src="images/download.png">http://topcased-gendoc.gforge.enseeiht.fr/releases/1.6.0/</p>
+       </div>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Monthly Report</h3>
+    <article >      
+      <img width="800"  style="position:absolute;left:120px;" src="images/gendoc-report.png" />
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+
+
+<!-- #################### mongoEMF ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>mongoEMF</h2>
+      <h3>MongoDB and EMF</h3>
+    </hgroup>
+    <article >
+       <img class="reflect"  height="320" src="images/mongo-expand.png" >
+       <!--<img class="reflect"  src="images/mongo-logo.png" style="position:absolute;left:800px;top:50px">-->       
+       <p>
+       <p><img class="icon" src="images/link.png">https://github.com/BryanHunt/mongo-emf</p>
+       <p><img class="icon" src="images/download.png">http://bryanhunt.github.com/mongo-emf/</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Database backend</h3>
+    <article >      
+      <pre class="prettyprint" data-lang="java">
+ class TBD {
+ }
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>    
+  
+  
+<!-- #################### blueprints-emf ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>blueprints-emf</h2>
     </hgroup>
     <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+       <img class="reflect"  src="images/blueprints-logo.png" width="320" style="position:absolute;left:720px;top:60px">       
+       <img class="reflect"  src="images/blueprints-graph.png">
+       <p>
+       <p><img class="icon" src="images/link.png">https://github.com/ghillairet/blueprints-emf</p>
+       <p><img class="icon" src="images/download.png">mvn clean package</p>
+       </p>
     </article>
   </slide>
+  
+   <slide>
+    <h3>Database backend</h3>
+    <article >      
+      <pre class="prettyprint" data-lang="java">
+ class TBD {
+ }
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>    
+  
+  
+  
 
-  <slide>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+<!-- #################### emf-specimen ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>EMF Specimen</h2>
+      <h3>Grow your models</h3>
+    </hgroup>
+    <article >       
+      <img class="reflect" src="images/specimen-elephant.png"> 
+       <p>
+       <p><img class="icon" src="images/link.png">https://github.com/Obeo/emf.specimen</p>
+       <p><img class="icon" src="images/download.png">mvn clean install</p>
+       </p>
     </article>
   </slide>
+  
+   <slide>
+    <article >
+     <pre class="prettyprint" data-lang="java">
+ class TBD {
+ }
+      </pre>
+          <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>    
+    
+  
+  
+<!-- #################### emf-client-platform ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Client Platform</h2>
+      <h3>RCP application framework</h3>
+    </hgroup>
+    <article >       
+      <img class="reflect" src="images/emfclientplatform-construction.png"> 
+       <img class="reflect"  src="images/emfclientplatform-logo.png" style="position:absolute;left:800px;top:50px">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/emfclient/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/emf-store/releases/latest</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Rich Editor</h3>
+    <article >
+      <img src="images/emfclientplatform-editor.png">      
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>    
+  
+  <!-- #################### Requestor ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Request Intepreter</h2>
+      <h3>Request your model</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" src="images/requestor-query.png"> 
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/acceleo/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>Users which are pointing at me</h3>
+    <article >
+      <img class="reflect" src="images/request-most-hated.png"/>      
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>
+  
+    
+<!-- #################### texo ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Texo</h2>
+      <h3>Enterprise Application Stack for EMF</h3>
+    </hgroup>
+    <article >       
+       <img class="reflect" width="300" src="images/texo-coffee.png">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/emfclient/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/emf-store/releases/latest</p>
+       </p>
+    </article>
+  </slide>
+  
+   <slide>
+    <h3>JPA + DAO</h3>
+     <article class="smaller">      
+      <pre class="prettyprint" data-lang="java">
+/**
+ * A representation of the model object '<em><b>Choco</b></em>'.
+ * @generated
+ */
+@Entity(name = "choco_Choco")
+public class Choco {
 
+  @Basic()
+  private String name = null;
+  
+  @Basic()
+  @Temporal(TemporalType.DATE)
+  private Date expiration = null;
+  
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
+      CascadeType.REFRESH }, optional = false)
+  @JoinColumns({ @JoinColumn() })
+  private User culprit = null;
+      </pre>
+      <img src="images/texo-generated.png" style="position:absolute;left:770px;top:100px">
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+  </slide>    
+  
+
+ 
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/product_logo_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
@@ -381,12 +670,6 @@ URL: https://code.google.com/p/io-2012-slides
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
     </p>
-  </slide>
-
-  <slide class="logoslide darkbackground nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/product_logo_wide_white.png"></span>
-    </article>
   </slide>
 
   <slide class="backdrop"></slide>
