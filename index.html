@@ -14,6 +14,7 @@ TODO :
   check the "feedback" ul-li on some pages.
   highlight code
   check order for projects
+  add references for images
   
   attributes
   construction : Anuar Zhumaev, from The Noun Project
@@ -58,11 +59,21 @@ TODO :
   <slide class="logoslide nobackground">
     <aside class="note">
       <section>
-        <p>Welcome to this talk, ...</p>
+        <p>Welcome</p>
       </section>
     </aside>
     <article class="flexbox vcenter">      
     </article>
+      <aside class="note">
+       <section>
+        <ul>
+            <li>I'am ...</li>
+            <li>My company</li>
+            <li>My roles makes me...</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
 
   <slide class="title-slide segue nobackground">
@@ -73,6 +84,18 @@ TODO :
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
     </hgroup>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>EMF is great, used everywhere</li>
+          <li>JavaBeans on steroids, containment, notifications and RESTful</li>
+          <li>How many are used to work with Ecore and EMF ?</li>
+          <li>This talk assume you know at least about the basics of EMF : Ecore and the core runtime.</li>
+          <li>Stable, mature... not moving. But ! </li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide> 
   
   <slide>
@@ -84,15 +107,7 @@ TODO :
         <li>Same amount of time per project
           <ul>
             <li>1min30</li>
-            <li>timing is forced by the presentation</li>
           </ul>          
-        </li>
-        <li>Same structure for each project
-          <ul>
-            <li>Scope and where to find it</li>
-            <li>An example</li>
-            <li>My feedback</li>
-          </ul>
         </li>
         <li>EMF Related
           <ul>
@@ -100,11 +115,27 @@ TODO :
             <li>Framework on top of EMF Core</li>
           </ul>          
         </li>
+        <li>Same structure for each project
+          <ul>
+            <li>Scope and where to find it</li>
+            <li>An example (mostly code)</li>
+            <li>My feedback</li>
+          </ul>
+        </li>
       </ul>
-      <p>I won't take questions during the presentation but would gladly discuss later on.</p>
       <img class="reflect" src="images/bus-logo.png" width="300" style="position:absolute;left:700px;top:120px">      
     </article>
     <footer class="source">http://thenounproject.com/einfachein/#</footer>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Let's go for a trip</li>
+          <li>Arbitrary choice, mine</li>
+          <li>No question..... yet ! </li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
   
   
@@ -118,6 +149,16 @@ TODO :
       </article>
     </hgroup>
     <footer >http://download.eclipse.org/releases/juno</footer>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Graphical Editing, Eclipse great in that</li>
+          <li>Class Diagram like</li>
+          <li>Define Ecore using it, or to create a diag</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
   
   
@@ -134,6 +175,9 @@ TODO :
       <aside class="note">
        <section>
         <ul>
+          <li>Board contains Users which might have choco</li>
+          <li>Reasons might be Build failure or other</li>
+          <li>Users gets to vote</li>
           <li>Stability "so so"</li>
           <li>Project in need of love!</li>
           <li>Layout : painful</li>          
@@ -160,6 +204,16 @@ TODO :
        <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
        </p>
     </article>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Ed Merks's talk yesterday</li>
+          <li>Textual syntax for Ecore with the corresponding editors</li>
+          <li>Strong java binding : Ecore feels like JDT</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>    
   </slide>
   
  <slide>
@@ -173,9 +227,12 @@ TODO :
      <aside class="note">
        <section>
         <ul>
-          <li>Complete, rich editing</li>
-          <li>Automatic code generation</li>
-          <li>Sometime sluggish/lag on completion</li>          
+          <li>Very readable and clean syntax or my choco model</li>
+          <li>I can define the derived attribute behavior</li>
+          <li>Java code gets 100% generated in background.
+          <li>Complete, Rich and Top notch tooling</li>
+          <li>Sometime sluggish/lag on completion</li>
+          <li>A bit young, already more than usable and promising.</li>
         </ul>
         <p><b></b></p>
        </section>
@@ -197,6 +254,16 @@ TODO :
        <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
        </p>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Properties for Tree or Graphical editor</li>
+          <li>Rich widgets (pick an EObject, richtext)</li>
+          <li>customization model, then generation</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>    
   </slide>
   
  <slide>
@@ -213,14 +280,85 @@ TODO :
         <ul>
           <li>A few clicks to get a sexier editor</li>
           <li>Doc to get started, and then not much</li>
-          <li>Too much code</li>                   
+          <li>Open : your own widget</li>
+          <li>Too much code gets generated</li>                   
         </ul>
         <p><b></b></p>
        </section>
       </aside>    
   </slide>
+
+<!-- #################### CDO ######################### -->
   
-    <!-- #################### Compare ######################### -->
+   <slide>
+    <hgroup>
+      <h2>CDO</h2>
+      <h3>Share and Distribute</h3>
+    </hgroup>
+    <article >
+       <img class="reflect" width="550"  src="images/cdo-users.png">
+       <img class="reflect" width="200" src="images/cdo-logo.png" style="position:absolute;left:800px;top:50px">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/cdo/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Distributed (RCP, Web..), notification</li>
+          <li>Scalability, automatic management of memory</li>                                                        
+          <li>Pretty much transparent API</li>
+        </ul>
+       </section>
+      </aside>
+  </slide>
+  
+   <slide>
+    <h3>Transaction, History ...</h3>
+    <article class="smaller">      
+      <pre class="prettyprint" data-lang="java">
+      //changing stuff
+      CDOTransaction tx = session.openTransaction();
+    CDOResource res = tx.getResource("allChocos.choco", true);
+    Board board = (Board) res.getContents().get(0);
+    BuildFail newFailure = ChocoFactory.eINSTANCE.createBuildFail();
+    newFailure.setDate(new Date());
+    newFailure
+        .setFailedLogURI("http://build.eclipse.org/hudson/somejob/23/build.log");
+    board.getReasons().add(newFailure);
+    tx.commit();
+    
+    // using history
+    
+    CDOView view = session.openView(aLongRepresentingSomeDate);
+    Board board = (Board) view.getResource("allChocos.choco").getContents()
+        .get(0);
+    // I'll get the result from the past
+    board.getChocos();
+    board.getReasons();
+
+    session.getCommitInfoManager().getCommitInfo(aLongRepresentingSomeDate)
+        .getComment();
+      </pre>
+      <ul class="build">      	
+      	<li>"Now that I've Got a Model - Where's My Application?" in Theater/ Thursday 10:30am</li>
+      </ul>
+    </article>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Powerful</li>
+          <li>Model migration, no complete answer yet</li>
+          <li>Feels seamless, but your app have to be multi-user</li>                                                        
+        </ul>
+        <p><b>No magic bullet for scalability</b></p>
+       </section>
+      </aside>    
+  </slide>
+
+  
+  <!-- #################### Compare ######################### -->
   
   <slide>
     <hgroup>
@@ -236,6 +374,15 @@ TODO :
        <p><img class="icon" src="images/download.png">http://download.eclipse.org/modeling/emf/compare/updates/interim/2.1</p>
        </p>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Model comparison in the IDE, SCM</li>
+          <li>Consistency, performances, scalability</li>                                                        
+          <li>and an standalone API</li>
+        </ul>
+       </section>
+      </aside>
   </slide>
   
       
@@ -246,9 +393,9 @@ TODO :
 public Resource <b>put</b>(URI resourcePath, Resource putFromRemoteClient,long ancestorTimestamp) {
     Resource ancestorFromDB = data.getResourcePerRevision(resourcePath,
             ancestorTimestamp);     
-    IComparisonScope scope = EMFCompare.createDefaultScope(<b>putFromRemoteClient,
+    IComparisonScope scope = <b>EMFCompare.createDefaultScope</b>(<b>putFromRemoteClient,
                                               latestFromDB.getResource(), ancestorFromDB</b>);
-    Comparison comp = EMFCompare.builder().build().<b>compare</b>(scope);
+    <b>Comparison comp</b> = EMFCompare.builder().build().<b>compare</b>(scope);
     for (Conflict conflict : <b>comp.getConflicts()</b>) {
         // How do you want to handle a conflict ?            
     }
@@ -260,118 +407,20 @@ public Resource <b>put</b>(URI resourcePath, Resource putFromRemoteClient,long a
 }
       </pre>
       <ul class="build">
-      	<li>Feedback</li>
+      	<li>EMF Compare 2.0 : Scaling to Millions / 2pm today</li>
       </ul>
     </article>
      <aside class="note">
        <section>
         <ul>
           <li>API is better but still young</li>
-          <li>At last at a level of quality to build bigger</li>                            
+          <li>Core service usable in many situations</li>
         </ul>
-        <p><b></b></p>
+        <p><b>You want that in your toolset !</b></p>
        </section>
       </aside>    
   </slide>
   
-  
-<!-- #################### sonar plugin ######################### -->
-  
-   <slide>
-    <hgroup>
-      <h2>Sonar Regex File Filter</h2>
-      <h3>Exclude generated code from your analysis</h3>
-    </hgroup>
-    <article >       
-       <img class="reflect" src="images/sonar-checklist.png">
-       <img class="reflect" width="200" src="images/sonar-logo.jpg" style="position:absolute;left:800px;top:50px">       
-       <p>
-       <p><img class="icon" src="images/link.png">https://github.com/Obeo/fr.obeo.sonar.plugin.regexfilefilter</p>
-       <p><img class="icon" src="images/download.png">mvn clean package</p>
-       </p>
-    </article>
-  </slide>
-  
-   <slide>
-    <h3>Sonar</h3>
-    <article >
-      <img src="images/sonar-config.png">      
-      <img src="images/sonar-example.png" style="position:absolute;left:400px;top:300px">
-      <ul class="build">
-      	<li>Feedback</li>
-      </ul>
-    </article>
-      <aside class="note">
-       <section>
-        <ul>
-          <li>Useful</li>                                     
-        </ul>
-        <p><b></b></p>
-       </section>
-      </aside>    
-  </slide>    
-  
-  <!-- #################### Wikitext Bridge ######################### -->
-  
-  <slide>
-    <hgroup>
-      <h2>Wikitext Bridge (Mylyn Intent)</h2>
-      <h3>Get a model from a wiki page</h3>
-    </hgroup>
-    <article >
-       <img class="reflect"  src="images/intent-bridge.png">
-       <img class="reflect"  src="images/wikitext-integration.png" width="500" style="position:absolute;left:600px;top:260px">
-       <p>
-       <p><img class="icon" src="images/link.png">http://www.eclipse.org/intent/</p>
-       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
-       </p>
-    </article>
-  </slide>
-  
-      
-  <slide>
-    <h3>Aggregate Wiki pages in a Single HTML document</h3>
-    <article class="smaller">      
-      <pre class="prettyprint" data-lang="java">
-private static void loadWikiPageAsModel() throws IOException {
-    
-    Document userGuide = getDocumentFromWiki(URI
-        .createURI("http://wiki.eclipse.org/EMF_Compare/User_Guide"));
-    Document developperGuide = getDocumentFromWiki(URI
-        .createURI("http://wiki.eclipse.org/EMF_Compare/Developer_Guide"));
-    Document faq = getDocumentFromWiki(URI
-        .createURI("http://wiki.eclipse.org/EMF_Compare/FAQ"));
-
-    Section userGuideSec = transformToSection(userGuide, "User Guide");
-    Section developperGuideSec = transformToSection(developperGuide,
-        "Developper Guide");
-    Section faqSec = transformToSection(faq, "Frequently Asked Questions");
-
-    Document aggregated = newDocument("EMF Compare");
-    aggregated.getContent().add(userGuideSec);
-    aggregated.getContent().add(developperGuideSec);
-    aggregated.getContent().add(faqSec);
-
-    Html generator = new Html(aggregated, new File("/tmp/wikiout"),
-        Collections.EMPTY_LIST);
-    generator.doGenerate(new BasicMonitor());
-  }
-      </pre>
-      <ul class="build">
-      	<li>Feedback</li>
-      </ul>
-    </article>
-      <aside class="note">
-       <section>
-        <ul>
-          <li>Opens a lot of possibilities</li>
-          <li>Cluttered with small bugs</li>
-          <li>Document model often weird to manipulate</li>                                                        
-        </ul>
-        <p><b></b></p>
-       </section>
-      </aside>    
-  </slide>
   
   <!-- #################### EMFPath ######################### -->
   
@@ -387,6 +436,15 @@ private static void loadWikiPageAsModel() throws IOException {
        <p><img class="icon" src="images/download.png">http://svn.codespot.com/a/eclipselabs.org/emfpath/trunk/repository/</p>
        </p>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>API bridging EMF and Guava</li>
+          <li>Readable queries with lazy implementation</li>                                                        
+          <li>Declarative Model transformation</li>
+        </ul>
+       </section>
+      </aside>
   </slide>
   
    <slide>
@@ -400,7 +458,8 @@ public class UserQuery {
   }
   public Iterable<Choco> allPendingChocos() {  
     Predicate<EObject> isPending = <b>Having.feature</b>(ChocoPackage.Literals.CHOCO__STATE,<b>Equals.to</b>(ChocoState.PENDING));
-    return adapt(user).<b>descendant().filter</b>(Choco.class).<b>filter</b>(isPending);
+    return adapt(user).<b>descendant()</b>.filter(Choco.class)
+                                            .<b>filter</b>(isPending);
   }
 }
       </pre>
@@ -412,6 +471,7 @@ public class UserQuery {
        <section>
         <ul>
           <li>No brainer if you use Guava and EMF</li>
+          <li>Might not be as useful if you use Xcore</li>
           <li>Beware the lazyness</li>
         </ul>
         <p><b></b></p>
@@ -439,6 +499,15 @@ public class UserQuery {
        <p><img class="icon" src="images/download.png">http://ghillairet.github.com/p2/emfjson/releases/0.5.0p>
        </p>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>EObjects to JSon to EObjects</li>
+          <li>Optional Typing information</li>                                                        
+          <li>"jsonref" notation to transform your tree in a graph</li>
+        </ul>
+       </section>
+      </aside>
   </slide>
   
       
@@ -449,7 +518,7 @@ public class UserQuery {
 public void get(URI resourcePath, OutputStream writer) throws IOException {
     Resource resource = this.dataAccess.get(resourcePath);
     JsResourceImpl jsRes = new JsResourceImpl(resourcePath); // put content from original resource to the json one.
-    jsRes.getContents().addAll(resource.getContents());
+    <b>jsRes.getContents().addAll(resource.getContents());</b>
     Map<String, Object> options = new HashMap<String, Object>();
     options.put(EMFJs.OPTION_INDENT_OUTPUT, true);
     options.put(EMFJs.OPTION_SERIALIZE_TYPE, false);
@@ -458,15 +527,15 @@ public void get(URI resourcePath, OutputStream writer) throws IOException {
 
 public void put(URI resourcePath, InputStream in) throws IOException {
     Map<String, Object> options = new HashMap<String, Object>();
-    options.put(EMFJs.OPTION_ROOT_ELEMENT,ChocoPackage.eINSTANCE.getBoard());
-    JsResourceImpl jsRes = new JsResourceImpl(resourcePath);
+    <b>options.put(EMFJs.OPTION_ROOT_ELEMENT,ChocoPackage.eINSTANCE.getBoard());</b>
+    JsResourceImpl jsRes = new <b>JsResourceImpl</b>(resourcePath);
     jsRes.load(options);
     this.dataAccess.put(resourcePath, jsRes, 0);
     
     /*
      * You could retrieve the instance with :
      */
-    Board root = (Board) jsRes.getContents().get(0);
+    <b>Board root</b> = (Board) jsRes.getContents().get(0);
 }
       </pre>
       <ul class="build">
@@ -485,52 +554,13 @@ public void put(URI resourcePath, InputStream in) throws IOException {
       </aside>    
   </slide>
 
-<!-- #################### CDO ######################### -->
-  
-   <slide>
-    <hgroup>
-      <h2>CDO</h2>
-      <h3>Share and Distribute</h3>
-    </hgroup>
-    <article >
-       <img class="reflect" width="550"  src="images/cdo-users.png">
-       <img class="reflect" width="200" src="images/cdo-logo.png" style="position:absolute;left:800px;top:50px">       
-       <p>
-       <p><img class="icon" src="images/link.png">http://www.eclipse.org/cdo/</p>
-       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
-       </p>
-    </article>
-  </slide>
-  
-   <slide>
-    <h3>Database backend</h3>
-    <article >      
-      <pre class="prettyprint" data-lang="java">
- class TBD {
- }
-      </pre>
-      <ul class="build">      	
-      	<li>"Now that I've Got a Model - Where's My Application?" in Theater/ Thursday 10:30am</li>
-      </ul>
-    </article>
-    <aside class="note">
-       <section>
-        <ul>
-          <li>Powerful</li>
-          <li>Model migration, no complete answer yet</li>
-          <li>Feels seamless, but your app have to be multi-user</li>                                                        
-        </ul>
-        <p><b>No magic bullet for scalability</b></p>
-       </section>
-      </aside>    
-  </slide>
   
 <!-- #################### gendoc ######################### -->
   
    <slide>
     <hgroup>
       <h2>Gendoc2</h2>
-      <h3>Generate Office docs from models</h3>
+      <h3>Generate (*)Office docs from models</h3>
     </hgroup>
     <article >
        <img class="reflect" width="300" style="position:absolute;left:680px;top:60px"  src="images/gendoc-doc.png">             
@@ -539,6 +569,15 @@ public void put(URI resourcePath, InputStream in) throws IOException {
         <p><img class="icon" src="images/download.png">http://topcased-gendoc.gforge.enseeiht.fr/releases/1.6.0/</p>
        </div>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Generate OpenOffice, LibreOffice or MSOfice</li>
+          <li>From an example of document, OCL in it.</li>                                                        
+          <li>Diagrams.</li>
+        </ul>
+       </section>
+      </aside>
   </slide>
   
    <slide>
@@ -554,7 +593,7 @@ public void put(URI resourcePath, InputStream in) throws IOException {
         <ul>
           <li>Necessary evil</li>
           <li>OCL in word is painful</li>
-          <li>Errors are kinda silent</li>                                                        
+          <li>Errors are silent</li>                                                        
         </ul>
         <p><b></b></p>
        </section>
@@ -577,6 +616,15 @@ public void put(URI resourcePath, InputStream in) throws IOException {
        <p><img class="icon" src="images/download.png">http://bryanhunt.github.com/mongo-emf/</p>
        </p>
     </article>
+        <aside class="note">
+       <section>
+        <ul>
+          <li>Heard about MongoDB ?</li>
+          <li>Web-scale document database</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
   
    <slide>
@@ -612,8 +660,9 @@ User etienne = (User) resource.getContents().get(0);
        <section>
         <ul>
           <li>Whenever MongoDB would be good</li>
-          <li>No transactions</li>
-          <li>not stable API yet</li>                                                        
+          <li>Completely OSGified</li>
+          <li>No multiobjects transactions!</li>
+          <li>not stable API yet</li>
         </ul>
         <p><b></b></p>
        </section>
@@ -635,6 +684,16 @@ User etienne = (User) resource.getContents().get(0);
        <p><img class="icon" src="images/download.png">mvn clean package</p>
        </p>
     </article>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>GraphDatabases are hot</li>
+          <li>a generic API or any graph database</li>
+          <li>Save your model in Neo4J</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
   
    <slide>
@@ -669,7 +728,7 @@ User etienne = (User) resource.getContents().get(0);
         <ul>
           <li>GraphDB and EMF : a good fit</li>
           <li>Pretty thin layer</li>
-          <li>Query would be interesting</li>                                                        
+          <li>Exciting experiments : Query ! Model evolution !</li>                                                        
         </ul>
         <p><b></b></p>
        </section>
@@ -693,6 +752,15 @@ User etienne = (User) resource.getContents().get(0);
        <p><img class="icon" src="images/download.png">mvn clean install</p>
        </p>
     </article>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Need test data which looks like real data</li>
+          <li>Random, but in a controlled way</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
   
    <slide>
@@ -755,6 +823,14 @@ User etienne = (User) resource.getContents().get(0);
        <p><img class="icon" src="images/download.png">http://download.eclipse.org/emf-store/releases/latest</p>
        </p>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Platform to build tools and RCP applications</li>
+          <li>Generic UI's and behavior you might replace</li>                                                        
+        </ul>
+       </section>
+      </aside>
   </slide>
   
    <slide>
@@ -762,18 +838,88 @@ User etienne = (User) resource.getContents().get(0);
     <article >
       <img src="images/emfclientplatform-editor.png">      
       <ul class="build">
-      	<li>Feedback</li>
+      	<li>Building a Tool based on EMF in 20 minutes / Thursday 2pm</li>
       </ul>
     </article>
     <aside class="note">
        <section>
         <ul>
-          <li>Good generic uis and behavior</li>                                                                 
+          <li>Good generic uis and behavior</li>
+          <li>Tied to EMFStore ? not any more => CDO</li>  
+          <li>Eclipse4, more customizations on the roadmap</li>                                                                 
         </ul>
         <p><b></b></p>
        </section>
       </aside>   
   </slide>    
+  
+  
+<!-- #################### texo ######################### -->
+  
+   <slide>
+    <hgroup>
+      <h2>Texo</h2>
+      <h3>Enterprise Application Stack for EMF</h3>
+    </hgroup>
+    <article >       
+       <img class="reflect" width="300" src="images/texo-coffee.png">       
+       <p>
+       <p><img class="icon" src="images/link.png">http://wiki.eclipse.org/Texo</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/modeling/emft/texo/updates/interim</p>
+       </p>
+    </article>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Alternate generation for EMF</li>
+          <li>Alternate framework for EMF</li>
+          <li>JEE world technologies</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
+  </slide>
+  
+   <slide>
+    <h3>JPA + DAO</h3>
+     <article class="smaller">      
+      <pre class="prettyprint" data-lang="java">
+/**
+ * A representation of the model object '<em><b>Choco</b></em>'.
+ * @generated
+ */
+@Entity(name = "choco_Choco")
+public class Choco {
+
+  @Basic()
+  private String name = null;
+  
+  @Basic()
+  @Temporal(TemporalType.DATE)
+  private Date expiration = null;
+  
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
+      CascadeType.REFRESH }, optional = false)
+  @JoinColumns({ @JoinColumn() })
+  private User culprit = null;
+      </pre>
+      <img src="images/texo-generated.png" style="position:absolute;left:770px;top:100px">
+      <ul class="build">
+      	<li>Taking EMF to the Mobile Web / Theater at 4.30pm</li>
+      </ul>
+    </article>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Missing piece between EMF and Java enterprise</li>
+          <li>Opens up a lot of possibilities: JBoss technologies, Cloud</li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>   
+  </slide>    
+  
+  
   
   <!-- #################### Requestor ######################### -->
   
@@ -802,61 +948,123 @@ User etienne = (User) resource.getContents().get(0);
   </slide>
   
     
-<!-- #################### texo ######################### -->
+<!-- #################### sonar plugin ######################### -->
   
    <slide>
     <hgroup>
-      <h2>Texo</h2>
-      <h3>Enterprise Application Stack for EMF</h3>
+      <h2>Sonar Regex File Filter</h2>
+      <h3>Exclude generated code from your analysis</h3>
     </hgroup>
     <article >       
-       <img class="reflect" width="300" src="images/texo-coffee.png">       
+       <img class="reflect" src="images/sonar-checklist.png">
+       <img class="reflect" width="200" src="images/sonar-logo.jpg" style="position:absolute;left:800px;top:50px">       
        <p>
-       <p><img class="icon" src="images/link.png">http://www.eclipse.org/emfclient/</p>
-       <p><img class="icon" src="images/download.png">http://download.eclipse.org/emf-store/releases/latest</p>
+       <p><img class="icon" src="images/link.png">https://github.com/Obeo/fr.obeo.sonar.plugin.regexfilefilter</p>
+       <p><img class="icon" src="images/download.png">mvn clean package</p>
        </p>
     </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Generated code is noise</li>
+          <li>No such plugin already</li>                                                        
+        </ul>
+       </section>
+      </aside>
   </slide>
   
    <slide>
-    <h3>JPA + DAO</h3>
-     <article class="smaller">      
-      <pre class="prettyprint" data-lang="java">
-/**
- * A representation of the model object '<em><b>Choco</b></em>'.
- * @generated
- */
-@Entity(name = "choco_Choco")
-public class Choco {
-
-  @Basic()
-  private String name = null;
-  
-  @Basic()
-  @Temporal(TemporalType.DATE)
-  private Date expiration = null;
-  
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-      CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn() })
-  private User culprit = null;
-      </pre>
-      <img src="images/texo-generated.png" style="position:absolute;left:770px;top:100px">
+    <h3>Sonar</h3>
+    <article >
+      <img src="images/sonar-config.png">      
+      <img src="images/sonar-example.png" style="position:absolute;left:400px;top:300px">
       <ul class="build">
       	<li>Feedback</li>
       </ul>
     </article>
-    <aside class="note">
+      <aside class="note">
        <section>
         <ul>
-          <li>Missing piece between EMF and Java enterprise</li>                                                                 
+          <li>Useful</li>                                     
         </ul>
         <p><b></b></p>
        </section>
-      </aside>   
+      </aside>    
   </slide>    
   
+  <!-- #################### Wikitext Bridge ######################### -->
+  
+  <slide>
+    <hgroup>
+      <h2>Wikitext Bridge (Mylyn Intent)</h2>
+      <h3>Get a model from a wiki page</h3>
+    </hgroup>
+    <article >
+       <img class="reflect"  src="images/intent-bridge.png">
+       <img class="reflect"  src="images/wikitext-integration.png" width="500" style="position:absolute;left:600px;top:260px">
+       <p>
+       <p><img class="icon" src="images/link.png">http://www.eclipse.org/intent/</p>
+       <p><img class="icon" src="images/download.png">http://download.eclipse.org/releases/juno</p>
+       </p>
+    </article>
+     <aside class="note">
+       <section>
+        <ul>
+          <li>Any wiki syntax : textile, mediawiki, markdown</li>
+          <li>A model of your document : Section, Para, Images</li>
+          <li>Bridge wiki information with EMF EcoSystem</li>
+        </ul>
+       </section>
+      </aside>
+  </slide>
+  
+      
+  <slide>
+    <h3>Aggregate Wiki pages in a Single HTML document</h3>
+    <article class="smaller">      
+      <pre class="prettyprint" data-lang="java">
+private static void loadWikiPageAsModel() throws IOException {
+    
+    Document userGuide = getDocumentFromWiki(URI
+        .createURI(<b>"http://wiki.eclipse.org/EMF_Compare/User_Guide"</b>));
+    Document developperGuide = getDocumentFromWiki(URI
+        .createURI(<b>"http://wiki.eclipse.org/EMF_Compare/Developer_Guide"</b>));
+    Document faq = getDocumentFromWiki(URI
+        .createURI(<b>"http://wiki.eclipse.org/EMF_Compare/FAQ"</b>));
 
+    <b>Section userGuideSec</b> = transformToSection(userGuide, "User Guide");
+    <b>Section developperGuideSec</b> = transformToSection(developperGuide,
+        "Developper Guide");
+    <b>Section faqSec</b> = transformToSection(faq, "Frequently Asked Questions");
+   
+    <b>
+    Document aggregated = newDocument("EMF Compare");
+    aggregated.getContent().add(userGuideSec);
+    aggregated.getContent().add(developperGuideSec);
+    aggregated.getContent().add(faqSec);
+    </b>
+    Html generator = new Html(aggregated, new File("/tmp/wikiout"),
+        Collections.EMPTY_LIST);
+    generator.doGenerate(new BasicMonitor());
+  }
+      </pre>
+      <ul class="build">
+      	<li>Feedback</li>
+      </ul>
+    </article>
+      <aside class="note">
+       <section>
+        <ul>
+          <li>Cluttered with small bugs</li>
+          <li>Document model often weird to manipulate</li>                                                        
+          <li>Opens a lot of possibilities ! compare, json ! </li>
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>    
+  </slide>
+  
+    
  
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/product_logo_128.png"></aside>
@@ -867,6 +1075,18 @@ public class Choco {
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
     </p>
+    <aside class="note">
+       <section>
+        <ul>
+          <li>Intense isn't it ?</li>
+          <li>Thank your for your attention</li>
+          <li>As you see, we could make a whole conference about EMF</li>
+          <li>Interesting things happening regarding new technologies</li>  
+          <li>You know another project, you want to discuss about one of those..</li>                                                                 
+        </ul>
+        <p><b></b></p>
+       </section>
+      </aside>
   </slide>
 
   <slide class="backdrop"></slide>

@@ -228,8 +228,8 @@ SlideDeck.prototype.onBodyKeyDown_ = function(e) {
       
     case 84: // T
       window.setInterval(function() {
-	window.slidedeck.nextSlide.apply(window.slidedeck)
-        },3000);
+	       window.slidedeck.nextSlide.apply(window.slidedeck)
+        },30000);
       break;
 
     case 27: // ESC: Hide notes and highlighting
